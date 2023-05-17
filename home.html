@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marcador Ping-Pong</title>
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+
+
+    }  
+    .hora{
+    margin: auto;  
+    color: black;
+    font-size: medium;   
+    font-weight: bold;
+    background-color: white;
+    width: auto; 
+    height: auto; 
+    margin-top: auto;
+    margin-bottom: auto;
+    justify-content: end;
+    }
+
+      .partido-1 {
+    display: flex;
+    justify-content: center;
+    background-color: #0DABF4FF;
+    border-radius: 10px;
+
+
+    }
+        .equipo-1{
+    margin: 0 150px;
+    }
+        .equipo-2{
+    margin: 0 150px;
+    }
+        img{
+          width: 100px;
+          height: 100px;
+          margin: 30px;
+        }
+        p{
+          font-size: 30px;
+        }
+        .logo-dos{
+          height:
+         
+           75px;
+          width: 75px;
+        }
+    </style>
+
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.20.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.20.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.20.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.20.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.20.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.20.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.20.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.20.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.20.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.20.0/firebase-performance-compat.js"></script>
+    <!--
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <h1>Resultados</h1>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/madre-de-dios-ikastetxea_web.png" class="logo-madrid">
+        <div class="equipo-1">
+          <h2>Infantil Masc</h2>
+          <p class="puntos">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">9:00 - 9:30 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Infantil Masc</h2>
+          <p class="puntos-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-madrid">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/madre-de-dios-ikastetxea_web.png" class="logo-madrid">
+        <div class="equipo-1">
+          <h2>Juvenil Masc Bilbao 1ºBach</h2>
+          <p class="puntos">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">9:00 - 9:30 h</h4> <h5>Campo: Buen C.</h5></div>
+        <div class="equipo-2">
+          <h2>Juvenil Masc Madrid 1ºBach</h2>
+          <p class="puntos-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-madrid">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-madrid">
+        <div class="equipo-1">
+          <h2>Prebenjamín (1ºPrim)</h2>
+          <p class="puntos">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">9:30 - 10:00 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Prebenjamín (2ºPrim)</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-madrid">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" alt="" class="logo-madrid">
+        <div class="equipo-1">
+          <h2>Benjamín (3ºPrim)</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h3>PreBenjamin</h3> <h4 class="hora">10:00 - 10:30 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Benjamín (4ºPrim)</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-madrid">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/logo azul Braga web (1).png" class="logo-madrid">
+        <div class="equipo-1">
+          <h2>Alevín Masc Bilbao(6ºPrim)</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2> <h4 class="hora">10:30 - 11:00 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Alevín Masc Berja(6ºPrim)</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/ESCUDO GADOR WEB_2.png" class="logo-madrid">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/madre-de-dios-ikastetxea_web.png" class="logo-madrid">
+        <div class="equipo-1">
+          <h2>Alevín Fem Bilbao</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">11:00 - 11:30 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Alevín Fem Braga</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logo azul Braga web (1).png" class="logo-bilbao">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/ESCUDO GADOR WEB_2.png" class="escudo-gador">
+        <div class="equipo-1">
+          <h2>Alevín Masc(5ºPrim)</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">11:30 - 12:00 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Alevín Masc(5ºPrim)</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-braga">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/logo azul Braga web (1).png" class="logo-madrid">
+        <div class="equipo-1">
+          <h2>Infantil Fem Braga</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">12:00 - 12:30 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Infantil Fem Madrid</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-bilbao">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/ESCUDO GADOR WEB_2.png" class="escudo-gador">
+        <div class="equipo-1">
+          <h2>Infantil Masc Berga</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">12:30 - 13:00 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Infantil Masc Beja</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logo azul Braga web.png" class="logo-braga">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/madre-de-dios-ikastetxea_web.png" class="escudo-gador">
+        <div class="equipo-1">
+          <h2>Juvenil Masc Bilbao</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">13:00 - 13:30 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Juvenil Masc Braga/Berja</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-bilbao">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" alt="">
+        <div class="equipo-1">
+          <h2>Padres Berja/Bilbao/Braga</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2> <h4 class="hora">14:00 - 14:30 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Padres Madrid</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-bilbao">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/madre-de-dios-ikastetxea_web.png" class="logo-madrid">
+        <div class="equipo-1">
+          <h2>Infantil Masc Bilbao 1º</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">14:30 - 15:00 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Infatil Masc Madrid 2º</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-braga">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/madre-de-dios-ikastetxea_web.png" class="logo-bilbao">
+        <div class="equipo-1">
+          <h2>Infantil Masc Bilbao 2º</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">15:00 - 15:30 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Infantil Masc Madrid 1º</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-braga">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/logo azul Braga web (1).png" class="logo-madrid">
+        <div class="equipo-1">
+          <h2>Alevín Masc Braga </h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2> <h4 class="hora">15:30 - 16:00 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Alevín Masc Madrid</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-bilbao">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="escudo-gador">
+        <div class="equipo-1">
+          <h2>Benjamín (3ºPrim)</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">16:30 - 17:00 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Benjamín (4ºPrim)</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-braga">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-madrid">
+        <div class="equipo-1">
+          <h2>Finalista Infantil 1</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">17:00 - 17:30 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Finalista Infantil 2</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-bilbao">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="escudo-gador">
+        <div class="equipo-1">
+          <h2>Finalista Alevín Masc 1</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">17:30 - 18:00 h</h4> <h5>Campo: MDD</h5></div>
+        <div class="equipo-2">
+          <h2>Finalista Alevín Masc 2</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logo azul Braga web (1).png" class="logo-braga">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/logoaltadefinicioncirculoweb.png" class="logo-madrid">
+        <div class="equipo-1">
+          <h2>Finalista Cadete Masc 1</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">18:00 - 18:30 h</h4> <h5>Campo: CMM</h5></div>
+        <div class="equipo-2">
+          <h2>Finalista Cadete Masc 2</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/madre-de-dios-ikastetxea_web.png" class="logo-bilbao">
+      </div>
+      <br>
+      <div class="partido-1">
+        <img src="img/escudo-equipos/ESCUDO GADOR WEB_2.png" class="escudo-gador">
+        <div class="equipo-1">
+          <h2>FInalista Juvenil Masc 1</h2>
+          <p class="gol">0</p>
+        </div>
+        <div><h2>VS</h2><h4 class="hora">18:30 - 19:00 h</h4> <h5>Mesa: 3</h5></div>
+        <div class="equipo-2">
+          <h2>Finalista Juvenil Masc 2</h2>
+          <p class="gol-1">0</p>
+        </div>
+        <img src="img/escudo-equipos/logo azul Braga web (1).png" class="logo-braga">
+      </div>
+      <script>
+      const resultados = [
+        { titulo: "Resultado 1", descripcion: "DescripciÃ³n del resultado 1", },
+        { titulo: "0 VS 0", descripcion: "00 : 00" },
+        { titulo: "0 VS 0", descripcion: "00 : 00" },
+        { titulo: "0 VS 0", descripcion: "00 : 00" },
+        { titulo: "0 VS 0", descripcion: "00 : 00" }
+      ];
+      const ulResultados = document.getElementById("resultados");
+
+
+// Creamos un elemento <li> por cada resultado y lo agregamos a la lista
+        resultados.forEach(resultado => {
+        const li = document.createElement("li");
+        li.innerHTML = `<h2>${resultado.titulo}</h2><p>${resultado.descripcion}</p>`;
+        ulResultados.appendChild(li);
+        });
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+ 
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+       
+
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth',
+            'database',
+            'firestore',
+            'functions',
+            'messaging',
+            'storage',
+            'analytics',
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+
